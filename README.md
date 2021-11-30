@@ -1,3 +1,3 @@
 # SocialNetwork
 Учебный проект Skillbox
-I is full nice QA engineer automation
+I is nice QA engineer automation
