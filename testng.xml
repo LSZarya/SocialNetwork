@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" name="C:/Users/LSZARYA/autotest_training/SocialNetwork/src/test/java">
+        <classes>
+<!--            <class name="AuthorizationTestSelenium.AuthorizationTest">-->
+<!--                <methods>-->
+<!--                    <include name="Social_StartSite_Test"/>-->
+<!--                    <include name="Social_Authorization_TestOK"/>-->
+<!--                    <include name="Social_Authorization_FailLogin"/>-->
+<!--                    <include name="Social_Authorization_FailNoPassword"/>-->
+<!--                    <include name="Social_Authorization_FailPasswordValidation"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+            <class name="TestApi.TestApiFE">
+                <methods>
+                    <include name="test_start"/>
+                    <include name="test_logo"/>
+                    <include name="test_profile"/>
+                    <include name="test_friends"/>
+                    <include name="test_envelope"/>
+                    <include name="test_news"/>
+                    <include name="test_setting"/>
+                    <include name="test_exit"/>
+                    <include name="test_search"/>
+                    <include name="test_push"/>
+                    <include name="test_photo"/>
+                    <include name="test_add"/>
+                </methods>
+            </class>
+            <class name="TestApi.TestAuthorizationApiBE">
+                <methods>
+                    <include name="test_authorization_ok"/>
+                    <include name="test_authorization_zero"/>
+                    <include name="test_authorization_noPassword"/>
+                    <include name="test_authorization_noMail"/>
+                </methods>
+            </class>
+            <class name="TestApi.TestRegistrationApiBE">
+                <methods>
+                    <include name="test_registration_ok"/>
+                    <include name="test_registration_zero"/>
+                    <include name="test_registration_OneEmail"/>
+                    <include name="test_registration_NoOdinacoviePassword"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
