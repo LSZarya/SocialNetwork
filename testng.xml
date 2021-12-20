@@ -50,41 +50,41 @@
             </class>
         </classes>
     </test>
-    <test name="TEST_Api">
-        <classes>
-            <class name="TestApi.TestApiFE">
-                <methods>
-                    <include name="test_start"/>
-                    <include name="test_logo"/>
-                    <include name="test_profile"/>
-                    <include name="test_friends"/>
-                    <include name="test_envelope"/>
-                    <include name="test_news"/>
-                    <include name="test_setting"/>
-                    <include name="test_exit"/>
-                    <include name="test_search"/>
-                    <include name="test_push"/>
-                    <include name="test_photo"/>
-                    <include name="test_add"/>
-                </methods>
-            </class>
-            <class name="TestApi.TestAuthorizationApiBE">
-                <methods>
-                    <include name="test_authorization_ok"/>
-                    <include name="test_authorization_zero"/>
-                    <include name="test_authorization_noPassword"/>
-                    <include name="test_authorization_noMail"/>
-                </methods>
-            </class>
-            <class name="TestApi.TestRegistrationApiBE">
-                <methods>
-                    <include name="test_registration_Lev"/>
-                    <include name="test_registration_ok"/>
-                    <include name="test_registration_zero"/>
-                    <include name="test_registration_OneEmail"/>
-                    <include name="test_registration_NoOdinacoviePassword"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
+<!--    <test name="TEST_Api">-->
+<!--        <classes>-->
+<!--            <class name="TestApi.TestApiFE">-->
+<!--                <methods>-->
+<!--                    <include name="test_start"/>-->
+<!--                    <include name="test_logo"/>-->
+<!--                    <include name="test_profile"/>-->
+<!--                    <include name="test_friends"/>-->
+<!--                    <include name="test_envelope"/>-->
+<!--                    <include name="test_news"/>-->
+<!--                    <include name="test_setting"/>-->
+<!--                    <include name="test_exit"/>-->
+<!--                    <include name="test_search"/>-->
+<!--                    <include name="test_push"/>-->
+<!--                    <include name="test_photo"/>-->
+<!--                    <include name="test_add"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="TestApi.TestAuthorizationApiBE">-->
+<!--                <methods>-->
+<!--                    <include name="test_authorization_ok"/>-->
+<!--                    <include name="test_authorization_zero"/>-->
+<!--                    <include name="test_authorization_noPassword"/>-->
+<!--                    <include name="test_authorization_noMail"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="TestApi.TestRegistrationApiBE">-->
+<!--                <methods>-->
+<!--                    <include name="test_registration_Lev"/>-->
+<!--                    <include name="test_registration_ok"/>-->
+<!--                    <include name="test_registration_zero"/>-->
+<!--                    <include name="test_registration_OneEmail"/>-->
+<!--                    <include name="test_registration_NoOdinacoviePassword"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
 </suite>
