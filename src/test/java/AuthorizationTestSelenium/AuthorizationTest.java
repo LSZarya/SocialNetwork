@@ -1,5 +1,4 @@
 package AuthorizationTestSelenium;
-
 import Autotesting_selenium.ChecksAuthorization;
 import org.testng.annotations.Test;
 

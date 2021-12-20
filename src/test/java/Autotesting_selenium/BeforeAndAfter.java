@@ -10,7 +10,7 @@ import org.testng.annotations.BeforeTest;
 
 import java.util.concurrent.TimeUnit;
 
-public class  BeforeAndAfter implements Variables {
+public class BeforeAndAfter implements Variables {
 
     public EventFiringWebDriver driver;
     public WebDriverWait wait;

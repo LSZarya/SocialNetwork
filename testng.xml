@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="Autotesting_selenium.TestNGListener"/>
+    </listeners>
+    <test name="TEST_Authorization">
+        <classes>
+            <class name="AuthorizationTestSelenium.AuthorizationTest">
+                <methods>
+                    <include name="Social_StartSite_Test"/>
+                    <include name="Social_Authorization_TestOK"/>
+                    <include name="Social_Authorization_FailLogin"/>
+                    <include name="Social_Authorization_FailNoPassword"/>
+                    <include name="Social_Authorization_FailPasswordValidation1"/>
+                    <include name="Social_Authorization_FailPasswordValidation2"/>
+                    <include name="Social_Authorization_FailPasswordValidation3"/>
+                    <include name="Social_Authorization_Eye"/>
+                    <include name="Social_Authorization_ButtonRegistration"/>
+                    <include name="Social_Authorization_ButtonSupport"/>
+                    <include name="Social_Authorization_ButtonRecovery"/>
+                    <include name="Social_Authorization_Language"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="TEST_Registration">
+        <classes>
+            <class name="AuthorizationTestSelenium.RegistrationTest">
+                <methods>
+                    <include name="Social_Registration_Ok"/>
+                    <include name="Social_Registration_Error1"/>
+                    <include name="Social_Registration_Error2"/>
+                    <include name="Social_Registration_PrivacyPolicy"/>
+                    <include name="Social_Registration_BtnAuthorization"/>
+                    <include name="Social_Registration_Language"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="TEST_Support">
+        <classes>
+            <class name="AuthorizationTestSelenium.SupportTest">
+                <methods>
+                    <include name="Social_Support_Ok"/>
+                    <include name="Social_Support_Error"/>
+                    <include name="Social_Support_BtnAuthorization"/>
+                    <include name="Social_Support_Language"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="TEST_Api">
+        <classes>
+            <class name="TestApi.TestApiFE">
+                <methods>
+                    <include name="test_start"/>
+                    <include name="test_logo"/>
+                    <include name="test_profile"/>
+                    <include name="test_friends"/>
+                    <include name="test_envelope"/>
+                    <include name="test_news"/>
+                    <include name="test_setting"/>
+                    <include name="test_exit"/>
+                    <include name="test_search"/>
+                    <include name="test_push"/>
+                    <include name="test_photo"/>
+                    <include name="test_add"/>
+                </methods>
+            </class>
+            <class name="TestApi.TestAuthorizationApiBE">
+                <methods>
+                    <include name="test_authorization_ok"/>
+                    <include name="test_authorization_zero"/>
+                    <include name="test_authorization_noPassword"/>
+                    <include name="test_authorization_noMail"/>
+                </methods>
+            </class>
+            <class name="TestApi.TestRegistrationApiBE">
+                <methods>
+                    <include name="test_registration_Lev"/>
+                    <include name="test_registration_ok"/>
+                    <include name="test_registration_zero"/>
+                    <include name="test_registration_OneEmail"/>
+                    <include name="test_registration_NoOdinacoviePassword"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

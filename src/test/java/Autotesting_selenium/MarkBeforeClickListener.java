@@ -14,13 +14,16 @@ public class MarkBeforeClickListener implements WebDriverEventListener {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        ((JavascriptExecutor) driver).executeScript("arguments[0].style.border='0px solid red'",
-                element);
     }
 
     @Override
     public void afterClickOn(WebElement element, WebDriver driver) {
-
+        try {
+            ((JavascriptExecutor) driver).executeScript("arguments[0].style.border='0px solid red'",
+                    element);
+        }catch(Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

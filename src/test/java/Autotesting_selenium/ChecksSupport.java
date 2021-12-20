@@ -32,7 +32,6 @@ public class ChecksSupport extends BeforeAndAfter{
         driver.get("http://45.134.255.54:5000/support");
     }
 
-    @Test
     public void SupportClickLanguage() {
         driver.findElement(LANGUAGE).click();
         driver.findElement(LANG_EN).click();
