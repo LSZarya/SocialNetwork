@@ -5,6 +5,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 public class RegistrationTest extends ChecksRegistration {
+
     @BeforeClass
     public void Up(){
         driver.get("http://45.134.255.54:5000/registration");

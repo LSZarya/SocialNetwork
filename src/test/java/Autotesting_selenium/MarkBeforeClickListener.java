@@ -10,7 +10,7 @@ public class MarkBeforeClickListener implements WebDriverEventListener {
                 element);
         // Пауза, что бы мы успели рассмотреть
         try {
-            Thread.sleep(1500);
+            Thread.sleep(50);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
@@ -24,6 +24,62 @@ public class MarkBeforeClickListener implements WebDriverEventListener {
         }catch(Exception e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public void beforeChangeValueOf(WebElement webElement, WebDriver webDriver, CharSequence[] charSequences) {
+        ((JavascriptExecutor) webDriver).executeScript("arguments[0].style.border='3px solid red'",
+                webElement);
+        // Пауза, что бы мы успели рассмотреть
+        try {
+            Thread.sleep(50);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    @Override
+    public void afterChangeValueOf(WebElement webElement, WebDriver webDriver, CharSequence[] charSequences) {
+        ((JavascriptExecutor) webDriver).executeScript("arguments[0].style.border='0px solid red'",
+                webElement);
+        ((JavascriptExecutor) webDriver).executeScript("arguments[0].style.border='3px solid blue'",
+                webElement);
+        try {
+            Thread.sleep(50);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        ((JavascriptExecutor) webDriver).executeScript("arguments[0].style.border='0px solid blue'",
+                webElement);
+    }
+
+    @Override
+    public void beforeGetText(WebElement element, WebDriver driver) {
+        ((JavascriptExecutor) driver).executeScript("arguments[0].style.border='3px solid red'",
+                element);
+        // Пауза, что бы мы успели рассмотреть
+        try {
+            Thread.sleep(50);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @Override
+    public void afterGetText(WebElement element, WebDriver driver, String s) {
+        ((JavascriptExecutor) driver).executeScript("arguments[0].style.border='0px solid red'",
+                element);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].style.border='3px solid blue'",
+                element);
+        // Пауза, что бы мы успели рассмотреть
+        try {
+            Thread.sleep(50);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        ((JavascriptExecutor) driver).executeScript("arguments[0].style.border='0px solid blue'",
+                element);
     }
 
     @Override
@@ -97,30 +153,6 @@ public class MarkBeforeClickListener implements WebDriverEventListener {
     }
 
     @Override
-    public void beforeChangeValueOf(WebElement webElement, WebDriver webDriver, CharSequence[] charSequences) {
-        ((JavascriptExecutor) webDriver).executeScript("arguments[0].style.border='3px solid red'",
-                webElement);
-        // Пауза, что бы мы успели рассмотреть
-        try {
-            Thread.sleep(500);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-
-    }
-
-    @Override
-    public void afterChangeValueOf(WebElement webElement, WebDriver webDriver, CharSequence[] charSequences) {
-        try {
-            Thread.sleep(500);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-        ((JavascriptExecutor) webDriver).executeScript("arguments[0].style.border='0px solid red'",
-                webElement);
-    }
-
-    @Override
     public void beforeScript(String s, WebDriver webDriver) {
 
     }
@@ -155,22 +187,5 @@ public class MarkBeforeClickListener implements WebDriverEventListener {
 
     }
 
-    @Override
-    public void beforeGetText(WebElement element, WebDriver driver) {
-        ((JavascriptExecutor) driver).executeScript("arguments[0].style.border='3px solid red'",
-                element);
-        // Пауза, что бы мы успели рассмотреть
-        try {
-            Thread.sleep(500);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    @Override
-    public void afterGetText(WebElement element, WebDriver driver, String s) {
-        ((JavascriptExecutor) driver).executeScript("arguments[0].style.border='0px solid red'",
-                element);
-    }
 }
 

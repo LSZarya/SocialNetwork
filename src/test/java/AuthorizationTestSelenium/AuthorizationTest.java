@@ -1,9 +1,15 @@
 package AuthorizationTestSelenium;
 import Autotesting_selenium.ChecksAuthorization;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 
 public class AuthorizationTest extends ChecksAuthorization {
+
+    @AfterMethod
+    public void Reset(){
+        driver.navigate().refresh();
+    }
 
     @Test
     public void Social_StartSite_Test() {

@@ -8,7 +8,7 @@ import static io.restassured.RestAssured.given;
 
 public class TestApiFE {
 
-    int ok = 200;
+    int statusCode = 200;
     String api = "http://45.134.255.54:5000/";
     String logo = "static/img/logo.svg";
     String profile = "static/img/sidebar/profile.svg";
@@ -33,7 +33,7 @@ public class TestApiFE {
                 .get()
                 .then()
                 .assertThat()
-                .statusCode(200);
+                .statusCode(statusCode);
     }
 
     @Test
@@ -44,7 +44,7 @@ public class TestApiFE {
                 .get(logo)
                 .then()
                 .assertThat()
-                .statusCode(200);
+                .statusCode(statusCode);
     }
 
     @Test
@@ -55,7 +55,7 @@ public class TestApiFE {
                 .get(profile)
                 .then()
                 .assertThat()
-                .statusCode(200);
+                .statusCode(statusCode);
     }
 
     @Test
@@ -66,7 +66,7 @@ public class TestApiFE {
                 .get(friends)
                 .then()
                 .assertThat()
-                .statusCode(200);
+                .statusCode(statusCode);
     }
 
     @Test
@@ -77,7 +77,7 @@ public class TestApiFE {
                 .get(envelope)
                 .then()
                 .assertThat()
-                .statusCode(200);
+                .statusCode(statusCode);
     }
 
     @Test
@@ -88,7 +88,7 @@ public class TestApiFE {
                 .get(news)
                 .then()
                 .assertThat()
-                .statusCode(200);
+                .statusCode(statusCode);
     }
 
     @Test
@@ -99,7 +99,7 @@ public class TestApiFE {
                 .get(setting)
                 .then()
                 .assertThat()
-                .statusCode(200);
+                .statusCode(statusCode);
     }
 
     @Test
@@ -110,7 +110,7 @@ public class TestApiFE {
                 .get(exit)
                 .then()
                 .assertThat()
-                .statusCode(200);
+                .statusCode(statusCode);
     }
 
     @Test
@@ -121,7 +121,7 @@ public class TestApiFE {
                 .get(search)
                 .then()
                 .assertThat()
-                .statusCode(200);
+                .statusCode(statusCode);
     }
 
     @Test
@@ -132,7 +132,7 @@ public class TestApiFE {
                 .get(push)
                 .then()
                 .assertThat()
-                .statusCode(200);
+                .statusCode(statusCode);
     }
 
     @Test
@@ -143,7 +143,7 @@ public class TestApiFE {
                 .get(photo)
                 .then()
                 .assertThat()
-                .statusCode(200);
+                .statusCode(statusCode);
     }
 
     @Test
@@ -154,7 +154,7 @@ public class TestApiFE {
                 .get(add)
                 .then()
                 .assertThat()
-                .statusCode(200);
+                .statusCode(statusCode);
     }
 
 }
