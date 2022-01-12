@@ -32,5 +32,6 @@ public class BeforeAndAfter implements Variables {
     @AfterTest
     public void teamDownEnd(){
         driver.quit();
+
     }
 }
